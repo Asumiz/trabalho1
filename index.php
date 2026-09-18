@@ -1,38 +1,49 @@
+
 <?php
-// Inicia sessão
+
 session_start();
 
-// Proteção: se não estiver logado, volta para login
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit;
 }
+
+$usuario = htmlspecialchars($_SESSION['usuario'], ENT_QUOTES, 'UTF-8');
+
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<title>Dashboard</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./ccs/styles.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<!-- Exibe usuário logado -->
-<h1>Bem-vindo, <?= $_SESSION['usuario']; ?>!</h1>
+        <h1>Bem-vindo, <?= $usuario ?>!</h1>
 
-<!-- Link para módulo de produtos -->
-<a href="produtos.php" class="btn">Gerenciar Produtos</a>
+        <p>Você está logado no sistema.</p>
 
-<br><br>
+        <a href="produtos.php" class="btn">
+            Produtos
+        </a>
 
-<!-- Logout -->
-<a href="logout.php" class="btn sair">Sair</a>
+        <a href="logout.php" class="btn">
+            Sair
+        </a>
 
-</div>
+    </div>
 
 </body>
+
 </html>
+
