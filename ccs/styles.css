@@ -1,0 +1,65 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+/* Container central */
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Inputs e textarea */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Botões */
+button {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+/* Links estilo botão */
+.btn {
+    display: inline-block;
+    padding: 10px;
+    background: green;
+    color: white;
+    text-decoration: none;
+}
+
+/* Botão sair */
+.sair {
+    background: red;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Mensagens */
+.erro {
+    color: red;
+}
+
+.sucesso {
+    color: green;
+}
